@@ -10,7 +10,7 @@ const techs = {
   SASS: "fab fa-sass",
   GIT: "fab fa-git",
   AWS: "fab fa-aws",
-  "Cloud management": "fas fa-cloud"
+  Linux: "fab fa-linux"
 };
 
 Object.keys(techs).forEach(tech => {
