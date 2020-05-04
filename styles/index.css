@@ -14,6 +14,7 @@ html {
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .header {
@@ -67,8 +68,7 @@ body {
 .projects {
   color: var(--cool-grey-050);
   background: var(--cool-grey-900);
-  height: 100vh;
-  padding: 0 10rem;
+  padding: 0 10rem 5rem;
 }
 
 .projects-title {
@@ -152,18 +152,19 @@ body {
 }
 
 .project-screen-link-demo {
+  margin-right: 5%;
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1.6rem;
   border-radius: 4px;
-  color: var(--blue-vivid-900);
-  background: var(--cool-grey-050);
+  color: var(--cool-grey-050);
+  background: var(--blue-vivid-700);
   transition: background 0.2s;
   user-select: none;
 }
 
 .project-screen-link-demo:hover {
-  background: var(--cool-grey-100);
+  background: var(--blue-vivid-600);
 }
 
 .project-slider-left,
@@ -210,6 +211,75 @@ body {
   transform: scale(1.5);
 }
 
+.projects-mobile {
+  display: none;
+  color: var(--cool-grey-050);
+  background: var(--cool-grey-900);
+  padding: 0 6rem 2rem;
+}
+
+.project-mobile-cards {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-mobile-card {
+  background: var(--cool-grey-050);
+  color: var(--cool-grey-900);
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+}
+
+.project-mobile-screen-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.project-mobile-screen-description {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.project-mobile-screen-links {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.project-mobile-screen-link-github {
+  margin-right: 5%;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  color: var(--cool-grey-050);
+  background: var(--blue-vivid-700);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.project-mobile-screen-link-github:hover {
+  background: var(--blue-vivid-600);
+}
+
+.project-mobile-screen-link-demo {
+  margin-right: 5%;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  color: var(--cool-grey-050);
+  background: var(--blue-vivid-700);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.project-mobile-screen-link-demo:hover {
+  background: var(--blue-vivid-600);
+}
+
+
 .divider {
   background: var(--cool-grey-900);
   display: flex;
@@ -220,15 +290,15 @@ body {
   height: 4px;
   border-radius: 2px;
   width: 75vw;
-  margin-left: 12.5vw;
+  margin-left: auto;
+  margin-right: auto;
   background: var(--cool-grey-400);
 }
 
 .tech {
   color: var(--cool-grey-050);
   background: var(--cool-grey-900);
-  height: 100vh;
-  padding: 0 10rem;
+  padding: 0 10rem 5rem;
 }
 
 .tech-title {
@@ -248,7 +318,7 @@ body {
 
 .tech-container {
   flex-grow: 1;
-  flex-basis: 20%;
+  flex-basis: 19%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -303,7 +373,7 @@ body {
   font-size: 5rem;
   margin: 0 3rem;
   color: var(--blue-vivid-600);
-  transition: color .2s;
+  transition: color 0.2s;
 }
 
 .contact-buttons > a:hover {
@@ -314,4 +384,99 @@ body {
   font-size: 1.6rem;
   margin-top: 5rem;
   text-align: center;
+}
+
+/* 900px */
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .header-title {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .header-subtitle {
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  .tech-container {
+    margin: 0;
+  }
+
+  .projects {
+    display: none;
+  }
+
+  .projects-mobile {
+    display: block;
+  }
+
+  .tech,
+  .contact {
+    padding: 0 6rem 5rem;
+  }
+
+  .tech-panel {
+    margin-top: 3rem;
+  }
+
+  .projects-title,
+  .tech-title,
+  .contact-title {
+    font-size: 3.6rem;
+  }
+
+  .contact-buttons {
+    padding-top: 3rem;
+  }
+}
+
+/* 1200px */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .header {
+    padding: 0 1rem;
+  }
+
+  .header-title {
+    text-align: center;
+  }
+
+  .header-subtitle {
+    text-align: center;
+  }
+
+  .header-image {
+    display: none;
+  }
+
+  .header-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tech-panel {
+    padding: 0 1rem;
+  }
+
+  .tech-container {
+    margin: 1rem;
+  }
+}
+
+/* 1500px */
+@media (max-width: 93.75em) {
+  .header-image {
+    height: 30rem;
+  }
+
+  .tech-panel {
+    padding: 0 5rem;
+  }
 }

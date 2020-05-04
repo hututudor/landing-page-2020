@@ -119,3 +119,26 @@ for (let i = 0; i < projects.length; i++) {
     .eq(i)
     .on("click", () => animate(i));
 }
+
+projects.forEach(project => {
+  $(".project-mobile-cards").append(`
+    <div class="project-mobile-card">
+      <div class="project-mobile-screen-title">${project.title}</div>
+      <div class="project-mobile-screen-description">${
+        project.description
+      }</div>
+      <div class="project-mobile-screen-links">
+        ${
+          project.links.github
+            ? '<div class="project-mobile-screen-link-github" onclick="window.open(${project.links.github}, \'_blank\')">Github</div>'
+            : ""
+        }
+        ${
+          project.links.demo
+            ? '<div class="project-mobile-screen-link-demo" onclick="window.open(${project.links.demo}, \'_blank\')">Demo</div>'
+            : ""
+        }
+      </div>
+    </div>
+  `);
+});
