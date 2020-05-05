@@ -130,12 +130,12 @@ projects.forEach(project => {
       <div class="project-mobile-screen-links">
         ${
           project.links.github
-            ? '<div class="project-mobile-screen-link-github" onclick="window.open(${project.links.github}, \'_blank\')">Github</div>'
+            ? `<div class="project-mobile-screen-link-github" onclick="window.open(\'${project.links.github}\', \'_blank\')">Github</div>`
             : ""
         }
         ${
           project.links.demo
-            ? '<div class="project-mobile-screen-link-demo" onclick="window.open(${project.links.demo}, \'_blank\')">Demo</div>'
+            ? `<div class="project-mobile-screen-link-demo" onclick="window.open(\'${project.links.demo}\', \'_blank\')">Demo</div>`
             : ""
         }
       </div>

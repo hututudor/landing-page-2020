@@ -318,7 +318,7 @@ body {
 
 .tech-container {
   flex-grow: 1;
-  flex-basis: 19%;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -461,7 +461,7 @@ body {
     margin-right: auto;
   }
 
-  .tech-panel {
+  .tech {
     padding: 0 1rem;
   }
 
